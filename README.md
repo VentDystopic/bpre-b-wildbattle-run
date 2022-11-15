@@ -19,7 +19,7 @@ $ cd bpre-b-wildbatle-run
 
 #### Adding your ROM
 
-Copy your ROM to this directory and rename it `rom.gba`.
+Copy your ROM to this directory and rename it `BPRE.gba`.
 
 ##### Where to insert
 
@@ -35,7 +35,7 @@ Once you're ready, run the following to build the project:
 make
 ```
 
-This won't actually modify `rom.gba`, instead your output will be in `test.gba`. Naturally, test it in an emulator.
+This won't actually modify `BPRE.gba`, instead your output will be in `build/rom.gba`. Naturally, test it in an emulator.
 
 ### Credits
 
