@@ -26,6 +26,7 @@
 
 //0802e33c PlayerBufferExecCompleted
 extern void PlayerBufferExecCompleted(void);
+extern void SafariBufferExecCompleted(void);
 
 //0x0802E438 HandleInputChooseAction
 void HandleInputChooseAction(void)
@@ -125,3 +126,80 @@ void HandleInputChooseAction(void)
         SwapHpBarsWithHpText();
     }
 }
+
+//080dd5a4 l 00000184 HandleInputChooseAction
+void HandleInputChooseAction_safari(void)
+{
+    if (JOY_NEW(A_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+
+        switch (gActionSelectionCursor[gActiveBattler])
+        {
+        case 0:
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SAFARI_BALL, 0);
+            break;
+        case 1:
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SAFARI_BAIT, 0);
+            break;
+        case 2:
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SAFARI_GO_NEAR, 0);
+            break;
+        case 3:
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SAFARI_RUN, 0);
+            break;
+        }
+        SafariBufferExecCompleted();
+    }
+    else if (JOY_NEW(DPAD_LEFT))
+    {
+        if (gActionSelectionCursor[gActiveBattler] & 1)
+        {
+            PlaySE(SE_SELECT);
+            ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+            gActionSelectionCursor[gActiveBattler] ^= 1;
+            ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+        }
+    }
+    else if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (!(gActionSelectionCursor[gActiveBattler] & 1))
+        {
+            PlaySE(SE_SELECT);
+            ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+            gActionSelectionCursor[gActiveBattler] ^= 1;
+            ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+        }
+    }
+    else if (JOY_NEW(DPAD_UP))
+    {
+        if (gActionSelectionCursor[gActiveBattler] & 2)
+        {
+            PlaySE(SE_SELECT);
+            ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+            gActionSelectionCursor[gActiveBattler] ^= 2;
+            ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+        }
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        if (!(gActionSelectionCursor[gActiveBattler] & 2))
+        {
+            PlaySE(SE_SELECT);
+            ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+            gActionSelectionCursor[gActiveBattler] ^= 2;
+            ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+        }
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        if(!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)) //if wild, pressing B moves cursor to run
+        {
+            PlaySE(SE_SELECT);
+            ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+            gActionSelectionCursor[gActiveBattler] = 3;
+            ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+        }
+    }
+}
+
