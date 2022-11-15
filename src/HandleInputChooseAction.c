@@ -7,7 +7,7 @@
 #include "m4a.h"
 #include "party_menu.h"
 #include "pokeball.h"
-#include "strings.h"
+//#include "strings.h"
 #include "pokemon_special_anim.h"
 #include "task.h"
 #include "util.h"

@@ -998,4 +998,5 @@ GetBattlerAtPosition = 0x080751e8|1;
 AddBagItem = 0x0809a084|1;
 
 /*table*/
-gBitTable = 0x0825e45c|1;
+gBitTable = 0x0825e45c;
+
