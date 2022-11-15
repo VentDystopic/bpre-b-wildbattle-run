@@ -40,5 +40,5 @@ This won't actually modify `BPRE.gba`, instead your output will be in `build/rom
 ### Credits
 
 The modifications belongs to Deokishisu, you can find it on this commit: [FRLG-Plus: B in Wild Battles Moves the Cursor to Run](https://github.com/Deokishisu/FRLG-Plus/commit/6d55b702ab147806e3e78a0aba6d6c1c9e917f29).
-I used this template for [C Inyections](https://github.com/Acimut/Pokeon-GBA-hack-template) made by Acimut.
+I used this template for [C Inyections](https://github.com/Acimut/Pokemon-GBA-hack-template) made by Acimut.
 The project structure and some of the build tools are from [pokefirered](https://github.com/pret/pokefirered).
