@@ -19,7 +19,7 @@ $ cd bpre-b-wildbatle-run
 
 #### Adding your ROM
 
-Copy your ROM to this directory and rename it `rom.gba`.
+Copy your ROM to this directory and rename it `BPRE.gba`.
 
 ##### Where to insert
 
@@ -35,10 +35,10 @@ Once you're ready, run the following to build the project:
 make
 ```
 
-This won't actually modify `rom.gba`, instead your output will be in `test.gba`. Naturally, test it in an emulator.
+This won't actually modify `BPRE.gba`, instead your output will be in `rom.gba`. Naturally, test it in an emulator.
 
 ### Credits
 
 The modifications belongs to Deokishisu, you can find it on this commit: [FRLG-Plus: B in Wild Battles Moves the Cursor to Run](https://github.com/Deokishisu/FRLG-Plus/commit/6d55b702ab147806e3e78a0aba6d6c1c9e917f29).
-I used this template for [C Inyections](https://github.com/Acimut/Pokeon-GBA-hack-template) made by Acimut.
+I used this template for [C Inyections](https://github.com/Acimut/Pokemon-GBA-hack-template) made by Acimut.
 The project structure and some of the build tools are from [pokefirered](https://github.com/pret/pokefirered).
