@@ -35,7 +35,7 @@ Once you're ready, run the following to build the project:
 make
 ```
 
-This won't actually modify `BPRE.gba`, instead your output will be in `rom.gba`. Naturally, test it in an emulator.
+This won't actually modify `BPRE.gba`, instead your output will be in `build/rom.gba`. Naturally, test it in an emulator.
 
 ### Credits
 
