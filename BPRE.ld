@@ -996,6 +996,7 @@ SwapHpBarsWithHpText = 0x08048a4c|1;
 GetBattlerPosition = 0x080751d8|1;
 GetBattlerAtPosition = 0x080751e8|1;
 AddBagItem = 0x0809a084|1;
+SafariBufferExecCompleted = 0x080dd8c8|1;
 
 /*table*/
 gBitTable = 0x0825e45c;
