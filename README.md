@@ -23,7 +23,7 @@ Copy your ROM to this directory and rename it `BPRE.gba`.
 
 ##### Where to insert
 
-The build system is smart enough to find enough free space on its own, but if you want it to be inserted at a particular address, you can specify it by updating the definition of `START_AT` in `config.mk`.
+You can specify it by updating the definition of `START_AT` in `config.mk`.
 
 If the given address is acceptable (i.e. is word-aligned and has enough bytes of free space), it will be inserted there. Otherwise, it will just use `START_AT` to determine where in the ROM it should start looking for free space.
 
