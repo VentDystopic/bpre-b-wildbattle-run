@@ -1,6 +1,6 @@
 ## B in Wild Battles Moves the Cursor to Run
 
-On the Fight, Bag, Pokemon, Run menu, pressing B will move the cursor to Run as long as the battle type isn't BATTLE_TYPE_TRAINER.
+Pressing B button on "Fight, Bag, Pokemon, Run" menu will move the cursor to Run as long the battle type isn't BATTLE_TYPE_TRAINER.
 
 ![](bpre-b-wildbattle-run.gif)
 
